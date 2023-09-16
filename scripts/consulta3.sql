@@ -59,5 +59,4 @@ group by
 select * from calculo_comparativo
 limit 10;
 
-    
 
