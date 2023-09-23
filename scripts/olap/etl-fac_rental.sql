@@ -12,7 +12,7 @@ select
     store_key
 from
     sakila.rental
-    join sakila_dwh.dim_custome using (customer_id)
+    join sakila_dwh.dim_customer using (customer_id)
     join sakila.staff using (staff_id)
     join sakila_dwh.dim_store using(store_id)
 
