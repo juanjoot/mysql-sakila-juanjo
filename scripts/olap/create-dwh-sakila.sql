@@ -35,3 +35,34 @@ foreign key (date_key) references dim_time(date_key)
 
 );
 
+create table if not exists dim_store
+(
+store_key      int not null AUTO_INCREMENT,
+store_id       tinyint(8) not null,
+store          varchar(20) not null,
+district       varchar(50) not null,
+city           varchar(50) not null,
+country        varchar(50) not null,
+
+last_update timestamp not null default  CURRENT_TIMESTAMP,
+
+primary key (store_key),
+unique index store_id (store_id)
+
+);
+
+create table if not exists dim_customer
+(
+customer_key      int not null AUTO_INCREMENT,
+customer_id       smallint(8) not null,
+customer          varchar(90) not null, 
+district          varchar(50) not null,
+city              varchar(50) not null,
+country           varchar(50) not null,
+
+last_update timestamp not null default  CURRENT_TIMESTAMP,
+
+primary key (customer_key),
+unique index store_id (customer_id)
+
+);
